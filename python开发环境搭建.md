@@ -1,14 +1,14 @@
 ### conda
-查看环境：conda info -e
-创建环境：conda create -n env_name python=2.7
-激活环境：source activate env_name
-删除环境：conda remove -n env_name --all
-安装所有包：conda install anaconda
-看某环境下安装的package：conda list -n env_name
-升级：    conda update conda
-        conda update anaconda
+ 查看环境：conda info -e
+ 创建环境：conda create -n env_name python=2.7
+ 激活环境：source activate env_name
+ 删除环境：conda remove -n env_name --all
+ 安装所有包：conda install anaconda
+ 看某环境下安装的package：conda list -n env_name
+ 升级：    conda update conda
+         conda update anaconda
 
-anaconda加入环境变量就会影响系统的python，不加入又难以正常启动
+anaconda加入环境变量
 sudo gedit ~/.bashrc
 exportPATH=~/anaconda3/bin:$PATH
 ource ~/.bashrc
@@ -21,7 +21,6 @@ pip -V 可以查看使用的pip版本及路径
      pip freeze >requirements.txt 输出依赖包信息到txt
 在另一个环境中使用
      pip install -r requirements.txt
-
 
 ### pyenv
      git clone https://github.com/yyuu/pyenv.git ~/.pyenv
