@@ -9,9 +9,9 @@
          conda update anaconda
 
 anaconda加入环境变量  
-sudo gedit ~/.bashrc  
-exportPATH=~/anaconda3/bin:$PATH  
-ource ~/.bashrc  
+ sudo gedit ~/.bashrc  
+ exportPATH=~/anaconda3/bin:$PATH  
+ ource ~/.bashrc  
 pip -V 可以查看使用的pip版本及路径  
 
 环境复制  
@@ -29,13 +29,13 @@ pip -V 可以查看使用的pip版本及路径
      echo 'eval "$(pyenv init -)"' >> ~/.bashrc  
      exec $SHELL -l  
 查看可安装的py版本  
-     pyenv install --list  
+pyenv install --list  
 安装anaconda  
-     pyenv install anaconda3-5.1.0  
+ pyenv install anaconda3-5.1.0  
 安装python3.5.2  
-     pyenv install 3.5.2  
+ pyenv install 3.5.2  
 查看已经安装的虚拟环境  
-     pyenv versions  
+ pyenv versions  
 卸载：pyenv uninstall x.x.x  
 安装或卸载后要rehash  
          pyenv rehash  
