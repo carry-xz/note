@@ -73,12 +73,15 @@ docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
 1.宿主机Ubuntu与docker安装ssh  
 apt update && apt install openssh-server  
 
+su - 
 2.以下配置在docker container中完成  
 echo 'root:123456' | chpasswd  
 将Root的密码修改为123456或其他  
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config  
 允许使用root身份登录  
 sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd  
+### 加root登录权限可以直接修改文件 
+vi /etc/ssh/sshd_config
 端口操作  
 echo "export VISIBLE=now" >> /etc/profile  
 启动ssh服务，注意关注ssh服务状态，很多时候都是这个问题  
